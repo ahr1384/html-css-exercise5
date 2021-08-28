@@ -28,6 +28,10 @@ body {
     background-color: #F4F7FE;
 }
 
+p {
+    margin: 0;
+}
+
 .my_container {
     min-height: 100%;
 }
@@ -42,7 +46,7 @@ body {
 
 .content {
     background-color: #F4F7FE;
-    /* margin-left: 325px; */
+    margin-left: 325px;
     overflow-wrap: break-word;
     padding: 20px 30px;
 }
@@ -180,4 +184,33 @@ body {
     vertical-align: middle;
 }
 
+/*----------menu responsive----------*/
+
+@media (max-width:1200px) {
+    .menu {
+        display: none;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
+
 /*----------content----------*/
+
+.infobox {
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+[class*=infobox] {
+    padding: 18px 26px;
+}
+
+img {
+    background-color: #F4F7FE;
+    border-radius: 50%;
+    padding: 10px;
+    float: left;
+    display: inline-block;
+}

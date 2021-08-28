@@ -12,8 +12,8 @@
 </head>
 
 <body>
-    <div class="my_container row">
-        <div class="menu hide">
+    <div class="my_container clearfix">
+        <div class="menu">
             <div class="topbar">
                 <div class="img-topbar">
                     <img src="./img/Logo.svg">
@@ -36,18 +36,62 @@
 
 
         <div class="content">
-            <div class="top-box">
-                <div class="welcome">
+            <div class="top-row clearfix">
+                <div class="welcomebox col-lg-6">
                     <p class="welcome_name">Hi Andrei,</p>
                     <p>Welcome to Venus!</p>
                 </div>
-                <div class="searchbox">
+                <div class="searchbox col-lg-6">
                     <form action="search" method="GET">
                         <input type="search" id="search" name="search" placeholder="Search">
                         <button type="submit" class="bsearch"><i class="fa fa-search"></i></button>
                     </form>
                 </div>
             </div>
+
+            <div class="info-row clearfix">
+
+                <div class="col-lg-3">
+                    <div class="infobox">
+                        <p>Spent this month</p>
+                        <p>$682.5</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="infobox clearfix">
+                        <div class="">
+                            <img src="./img/Icon1-rightside-small-box.svg">
+                        </div>
+                        <div class="">
+                            <p>Earnings</p>
+                            <p>$350.40</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="infobox">3</div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="infobox">4</div>
+                </div>
+            </div>
+
+            <!-- <div class="cards-row clearfix">
+                <div class="cardsbox1 col-lg-8">
+                    <div class="col-lg-6">1.1</div>
+                    <div class="col-lg-6">1.2</div>
+                </div>
+                <div class="cardsbox2 col-lg-4">2</div>
+            </div>
+
+            <div class="otherinfo-row clearfix">
+                <div class="otherinfo-box1 col-lg-4">1</div>
+                <div class="otherinfo-box2 col-lg-4">2</div>
+                <div class="otherinfo-box3 col-lg-4">3</div>
+            </div> -->
         </div>
     </div>
 </body>
