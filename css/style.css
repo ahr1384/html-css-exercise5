@@ -189,6 +189,8 @@ p {
 @media (max-width:1200px) {
     .menu {
         display: block;
+z-index: 999;
+background-color: #fff;
     }
 
     .content {
