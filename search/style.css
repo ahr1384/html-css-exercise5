@@ -1,0 +1,27 @@
+body {
+    text-align: center;
+    overflow: hidden;
+}
+
+input {
+    padding: 10px 15px;
+    width: 40%;
+    outline: none;
+    font-size: 16px;
+    transition: 0.5s;
+    border-radius: 4px;
+}
+
+input:focus {
+    padding: 15px 20px;
+    width: 50%;
+    outline: none;
+    font-size: 18px;
+    border: solid 2px rgb(73, 73, 73);
+}
+
+b {
+    color: red;
+    font-size: 20px;
+    font-weight: 800;
+}
