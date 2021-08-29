@@ -13,7 +13,8 @@
 
 <body>
     <div class="my_container clearfix">
-        <div class="menu">
+        <div id="menu" class="menu" style="left: -310px;">
+            <button class="btn-close-menu" onclick="toggleMenu()">X</button>
             <div class="topbar">
                 <div class="img-topbar">
                     <img src="./img/Logo.svg">
@@ -34,68 +35,119 @@
         </div>
 
         <div class="menu-top">
-            <a href="#">open menu</a>
+            <button id="btn-toggle-menu" onclick="toggleMenu()">menu</button>
         </div>
 
         <div class="content">
 
             <div class="top-row clearfix">
-                <div class="welcomebox col-lg-6">
-                    <p class="welcome_name">Hi Andrei,</p>
+                <div class="welcomebox col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <span class="welcome_name">Hi Andrei,</span>
                     <p>Welcome to Venus!</p>
                 </div>
-                <div class="searchbox col-lg-6">
-                    <form action="search" method="GET">
-                        <input type="search" id="search" name="search" placeholder="Search">
-                        <button type="submit" class="bsearch"><i class="fa fa-search"></i></button>
+                <div class="searchbox col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <form class="searchform" action="search" method="GET">
+                        <div class="formgroup">
+                            <label for="search"><img src="./img/Search Icon.svg"></label>
+                            <input type="search" id="search" name="search" placeholder="Search">
+                        </div>
                     </form>
                 </div>
             </div>
 
             <div class="info-row clearfix">
 
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                     <div class="infobox">
                         <p>Spent this month</p>
-                        <p>$682.5</p>
+                        <span>$682.5</span>
                     </div>
                 </div>
 
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                     <div class="infobox clearfix">
-                        <div class="">
+                        <div>
                             <img src="./img/Icon1-rightside-small-box.svg">
                         </div>
-                        <div class="">
+                        <div>
                             <p>Earnings</p>
-                            <p>$350.40</p>
+                            <span>$350.40</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3">
-                    <div class="infobox clearfix">3</div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="infobox clearfix">
+                        <div class="purple-img">
+                            <img src="./img/Icon2-rightside-small-box.svg">
+                        </div>
+                        <div>
+                            <p>New clients</p>
+                            <span>321</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="col-lg-3">
-                    <div class="infobox">4</div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="infobox purple-backgraound">
+                        <p>Activity</p>
+                        <span>$540.50</span>
+                    </div>
                 </div>
             </div>
 
-            <!-- <div class="cards-row clearfix">
-                <div class="cardsbox1 col-lg-8">
-                    <div class="col-lg-6">1.1</div>
-                    <div class="col-lg-6">1.2</div>
+            <div class="card-row clearfix">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <div class="cardbox clearfix">
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                            <div class="left-cardbox">
+                                <div>
+                                    <span>Reach financial goals faster</span>
+                                    <p>Use your Venus card around the world with no hidden fees. Hold, transfer and
+                                        spend money.</p>
+                                </div>
+                                <div>
+                                    <a href="#">Learn more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                            <img class="left-cardbox-img" src="./img/cards.png">
+                        </div>
+                    </div>
                 </div>
-                <div class="cardsbox2 col-lg-4">2</div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="cardbox p-right-cardbox">
+                        <div class="right-cardbox-img">
+                            <img src="./img/fingerprint.svg">
+                        </div>
+                        <div class="right-cardbox-text">
+                            <span>Control card security in-app with a tap</span>
+                            <p>Discover our cards benefits, with <br />one tap.</p>
+                        </div>
+                        <div class="right-cardbox-btn">
+                            <a href="#">Cards</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="otherinfo-row clearfix">
+
+            <!-- <div class="otherinfo-row clearfix">
                 <div class="otherinfo-box1 col-lg-4">1</div>
                 <div class="otherinfo-box2 col-lg-4">2</div>
                 <div class="otherinfo-box3 col-lg-4">3</div>
             </div> -->
         </div>
     </div>
+    <script>
+        const menu = document.getElementById("menu");
+        const toggleMenu = () => {
+            if (menu.style.left == "-310px")
+                menu.style.left = "0px";
+            else menu.style.left = "-310px";
+        }
+    </script>
 </body>
 
 </html>

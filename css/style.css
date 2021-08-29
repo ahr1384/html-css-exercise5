@@ -25,6 +25,7 @@ html {
 
 body {
     height: 100%;
+    font-family: DMSans;
     background-color: #F4F7FE;
 }
 
@@ -57,13 +58,15 @@ p {
 /*----------menu & content grid----------*/
 
 .menu {
-    width: 325px;
+    width: 320px;
     float: left;
     background-color: #fff;
     position: fixed;
     height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
+    /* left: 0 !important; */
+
 }
 
 .menu-top {
@@ -72,19 +75,11 @@ p {
     padding: 15px;
 }
 
-.menu-top a {
-    font-size: 20px;
-    background-color: #F4F7FE;
-    border: #000 1px solid;
-    border-radius: 5px;
-    padding: 5px 10px;
-}
-
 .content {
     background-color: #F4F7FE;
-    margin-left: 325px;
+    margin-left: 322px;
     overflow-wrap: break-word;
-    padding: 20px 30px;
+    padding: 20px 15px;
 }
 
 /*----------menu topbar----------*/
@@ -171,13 +166,19 @@ p {
     vertical-align: middle;
 }
 
+.btn-close-menu {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
 /*----------menu & content responsive----------*/
 
 @media (max-width:1200px) {
     .menu {
-        display: none;
-        width: 300px;
+        width: 310px;
         z-index: 999;
+        transition: 0.4s;
     }
 
     .content {
@@ -186,27 +187,180 @@ p {
 }
 
 @media (min-width:1201px) {
-    .menu-top {
+
+    .menu-top,
+    .btn-close-menu {
         display: none;
     }
 
+    .menu {
+        left: 0 !important;
+    }
 }
 
 /*----------content----------*/
 
-.infobox {
+.infobox,
+.cardbox {
     background-color: #fff;
-    border-radius: 15px;
+    border-radius: 20px;
 }
 
-[class*=infobox] {
-    padding: 20px 17px;
+.infobox {
+    padding-bottom: 20px;
+    height: 100px;
+    padding: 22px;
+}
+
+.cardbox {
+    padding-top: 30px;
+    padding-left: 30px;
 }
 
 .infobox img {
     background-color: #F4F7FE;
     border-radius: 50%;
-    padding: 10px;
+    padding: 12px;
     float: left;
-    margin-right: 12px;
+    margin-right: 18px;
+}
+
+.welcomebox span {
+    font-weight: bold;
+    font-size: 15px;
+    color: #707EAE;
+}
+
+.welcomebox p {
+    font-weight: bold;
+    font-size: 36px;
+    color: #2B3674;
+}
+
+.formgroup {
+    position: relative;
+    float: right;
+}
+
+.formgroup input {
+    width: 400px;
+    border: none;
+    padding: 15px 44px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.formgroup label {
+    position: absolute;
+    top: 14px;
+    left: 20px;
+}
+
+.top-row {
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+
+.searchbox {
+    margin-top: 20px;
+}
+
+.infobox p {
+    color: #A3AED0;
+}
+
+.infobox span {
+    font-size: 26px;
+    font-weight: bold;
+    color: #1B2559;
+    ;
+}
+
+.purple-img img {
+    background: linear-gradient(135deg, #868CFF 0%, #4318FF 100%);
+}
+
+.purple-backgraound {
+    background: linear-gradient(135deg, #868CFF 0%, #4318FF 100%);
+}
+
+.purple-backgraound p,
+.purple-backgraound span {
+    color: #fff;
+}
+
+.info-row {
+    margin-bottom: 20px;
+}
+
+[class*=col] {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+
+.left-cardbox {
+    padding-top: 20px;
+}
+
+.left-cardbox span {
+    font-weight: bold;
+    font-size: 34px;
+    color: #1B2559;
+}
+
+.left-cardbox p {
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 18px;
+    margin-bottom: 20px;
+    color: #A3AED0;
+    line-height: 30px;
+}
+
+.left-cardbox a {
+    background-color: #4318FF;
+    color: #fff;
+    border-radius: 70px;
+    padding: 16px 50px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.left-cardbox-img {
+    width: 90%;
+    float: right;
+}
+
+.p-right-cardbox {
+    padding: 30px;
+}
+
+.right-cardbox-img img {
+    margin-bottom: 15px;
+}
+
+.right-cardbox-text span {
+    font-size: 28px;
+    color: #1B2559;
+    font-weight: bold;
+}
+
+.right-cardbox-text p {
+    font-size: 14px;
+    color: #A3AED0;
+    margin-top: 8px;
+}
+
+
+.right-cardbox-btn a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #4318FF;
+    border-radius: 70px;
+    padding: 16px 0;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 19.66px;
 }
