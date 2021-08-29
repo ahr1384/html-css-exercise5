@@ -28,23 +28,12 @@ body {
     background-color: #F4F7FE;
 }
 
+p {
+    margin: 0;
+}
+
 .my_container {
     min-height: 100%;
-}
-
-.menu {
-    width: 325px;
-    float: left;
-    background-color: #fff;
-    position: fixed;
-    height: 100%;
-}
-
-.content {
-    background-color: #F4F7FE;
-    /* margin-left: 325px; */
-    overflow-wrap: break-word;
-    padding: 20px 30px;
 }
 
 /*----------scrollbar----------*/
@@ -59,11 +48,43 @@ body {
 
 ::-webkit-scrollbar-thumb {
     background: #999;
-    /* border-radius: 4px; */
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: #777;
+}
+
+/*----------menu & content grid----------*/
+
+.menu {
+    width: 325px;
+    float: left;
+    background-color: #fff;
+    position: fixed;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.menu-top {
+    background-color: #fff;
+    width: 100%;
+    padding: 15px;
+}
+
+.menu-top a {
+    font-size: 20px;
+    background-color: #F4F7FE;
+    border: #000 1px solid;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.content {
+    background-color: #F4F7FE;
+    margin-left: 325px;
+    overflow-wrap: break-word;
+    padding: 20px 30px;
 }
 
 /*----------menu topbar----------*/
@@ -83,22 +104,10 @@ body {
     height: 48px;
 }
 
-.row {
-    margin: 0;
-}
-
-.menu {
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
 /*----------menu navbar----------*/
 
 .navbar {
-    padding-top: 26px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 40px;
+    padding: 26px 40px 40px 40px;
 }
 
 .nav-active {
@@ -118,13 +127,6 @@ body {
     color: #fff;
 }
 
-.nav-active span {
-    font-size: 17px;
-    font-family: DMSans;
-    margin-left: 14px;
-    vertical-align: middle;
-}
-
 .nav-inactive {
     color: #A3AED0;
     padding: 12px 11px;
@@ -141,21 +143,8 @@ body {
     color: #A3AED0;
 }
 
-.nav-inactive span {
-    font-size: 17px;
-    font-family: DMSans;
-    margin-left: 14px;
-    vertical-align: middle;
-}
-
-/*----------menu bottombar----------*/
-
 .bottombar {
-
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 15px;
+    padding: 10px 20px 15px;
 }
 
 .nav-logout {
@@ -173,6 +162,8 @@ body {
     color: #A3AED0;
 }
 
+.nav-active span,
+.nav-inactive span,
 .nav-logout span {
     font-size: 17px;
     font-family: DMSans;
@@ -180,4 +171,42 @@ body {
     vertical-align: middle;
 }
 
+/*----------menu & content responsive----------*/
+
+@media (max-width:1200px) {
+    .menu {
+        display: none;
+        width: 300px;
+        z-index: 999;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
+
+@media (min-width:1201px) {
+    .menu-top {
+        display: none;
+    }
+
+}
+
 /*----------content----------*/
+
+.infobox {
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+[class*=infobox] {
+    padding: 20px 17px;
+}
+
+.infobox img {
+    background-color: #F4F7FE;
+    border-radius: 50%;
+    padding: 10px;
+    float: left;
+    margin-right: 12px;
+}
