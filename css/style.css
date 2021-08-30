@@ -37,8 +37,6 @@ p {
     min-height: 100%;
 }
 
-/*----------scrollbar----------*/
-
 ::-webkit-scrollbar {
     width: 7px;
 }
@@ -55,8 +53,6 @@ p {
     background: #777;
 }
 
-/*----------menu & content grid----------*/
-
 .menu {
     width: 320px;
     float: left;
@@ -65,8 +61,6 @@ p {
     height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
-    /* left: 0 !important; */
-
 }
 
 .menu-top {
@@ -81,8 +75,6 @@ p {
     overflow-wrap: break-word;
     padding: 20px 15px;
 }
-
-/*----------menu topbar----------*/
 
 .topbar {
     border-bottom: #F4F7FE 1px solid;
@@ -99,8 +91,6 @@ p {
     height: 48px;
 }
 
-/*----------menu navbar----------*/
-
 .navbar {
     padding: 26px 40px 40px 40px;
 }
@@ -116,7 +106,7 @@ p {
 }
 
 .nav-inactive:hover {
-    background-color: #f1f1f1;
+    background-color: #f4f7fe;
     text-decoration: none;
     color: #A3AED0;
 }
@@ -152,7 +142,7 @@ p {
 }
 
 .nav-logout:hover {
-    background-color: #f1f1f1;
+    background-color: #f4f7fe;
     text-decoration: none;
     color: #A3AED0;
 }
@@ -171,34 +161,6 @@ p {
     right: 10px;
     top: 10px;
 }
-
-/*----------menu & content responsive----------*/
-
-@media (max-width:1200px) {
-    .menu {
-        width: 310px;
-        z-index: 999;
-        transition: 0.4s;
-    }
-
-    .content {
-        margin-left: 0;
-    }
-}
-
-@media (min-width:1201px) {
-
-    .menu-top,
-    .btn-close-menu {
-        display: none;
-    }
-
-    .menu {
-        left: 0 !important;
-    }
-}
-
-/*----------content----------*/
 
 .infobox,
 .cardbox {
@@ -309,7 +271,6 @@ p {
     padding-right: 10px;
 }
 
-
 .left-cardbox {
     padding-top: 20px;
 }
@@ -365,7 +326,6 @@ p {
     margin-top: 8px;
 }
 
-
 .right-cardbox-btn a {
     color: #fff;
     text-decoration: none;
@@ -382,7 +342,6 @@ p {
 .right-cardbox-btn a:hover {
     background-color: #2d11a8;
 }
-
 
 .card-row {
     margin-bottom: 20px;
@@ -440,6 +399,11 @@ p {
     color: #4318FF;
     font-weight: bold;
     text-decoration: none;
+    transition: 0.2s;
+}
+
+.links a:hover {
+    color: #2d11a8;
 }
 
 .title-center-box {
@@ -460,6 +424,13 @@ p {
     border-left: 5px solid #4318FF;
     padding-left: 10px;
     text-align: left;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.text-center:hover {
+    background-color: #f4f7fe;
+    border-radius: 5px;
 }
 
 .text-center p {
@@ -516,4 +487,78 @@ p {
     font-weight: bold;
     font-size: 24px;
     color: #1B2559;
+}
+
+.info-profile div {
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.info-profile div:hover {
+    background-color: #f1f1f1;
+    text-decoration: none;
+}
+
+@media (max-width:1199px) {
+    .menu {
+        width: 310px;
+        z-index: 999;
+        transition: 0.4s;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .info-row div {
+        margin-bottom: 10px;
+    }
+
+    .searchform,
+    .formgroup,
+    .formgroup input {
+        width: 100%;
+    }
+
+    .info-row {
+        margin-bottom: 0;
+    }
+
+    .card-row {
+        margin-bottom: 0;
+    }
+
+    .top-row {
+        margin-bottom: 20px;
+    }
+
+    .otherinfo-box {
+        margin-top: 20px;
+    }
+
+    .card-row {
+        margin-bottom: 0px;
+    }
+
+    .card-row>div:first-child div {
+        margin-bottom: 20px;
+    }
+
+    .left-cardbox-img {
+        width: 100%;
+    }
+}
+
+@media (min-width:1200px) {
+
+    .menu-top,
+    .btn-close-menu {
+        display: none;
+    }
+
+    .menu {
+        left: 0 !important;
+    }
 }
